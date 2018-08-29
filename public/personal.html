@@ -13,7 +13,11 @@
 
     <style type="text/css">
 
-    .bio {
+    body {
+      background-color:rgb(169,175,186);
+    }
+
+    .persov {
       background-color: rgb(96,136,201);
       text-align: center;
     }
@@ -23,19 +27,13 @@
       text-align: center;
     }
 
-    .title {
+    img {
+      width: 100%;
+    }
+
+    table {
       text-align: center;
     }
-
-    .personal {
-      border: 2px solid;
-      vertical-align: middle;
-    }
-
-    .professional {
-          border: 2px solid;
-          vertical-align: middle;
-        }
 
     </style>
 
@@ -44,12 +42,81 @@
   </head>
 
   <body>
+    <h1>Personal Interests</h1>
 
     <div class="container-fluid">
 
+      <div class="row placeholder persov">
+        <div class="col placeholder ov">
+          <h4>Overview</h4>
+          <br/>
+          Three years ago I had never been out of the United States. I went on my first international trip up to Canada with my dad and ever since then I've been hooked. Since then whenever I am not working or in school I try to visit a new country. This has led me to see 21 different countries over the past three years and has fostered some incredible experiences from getting stranded in the Moroccan countryside to watching the northern lights flicker through Icelandic skies. Below is a table highlighting a few of my favorite countries and some stats about them.
+          <br/><br/>
+        </div>
+      </div>
 
 
-    </div>
+        <div class="col">
+          <img src="img/peru.jpg"/>
+        </div>
+
+
+        <div class="col table">
+          <h4>Data</h4>
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>
+                  Country
+                </td>
+                <th>
+                  Population
+                </td>
+                <th>
+                  Date Landed
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Iceland
+                </td>
+                <td>
+                  334,252
+                </td>
+                <td>
+                  05/06/2016<br/><br/>
+                  01/02/2017
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Morocco
+                </td>
+                <td>
+                  35,280,000
+                </td>
+                <td>
+                  07/28/2017
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Peru
+                </td>
+                <td>
+                  31,770,000
+                </td>
+                <td>
+                  05/04/2018
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+  </div>
 
   </body>
 </html>
