@@ -13,7 +13,11 @@
 
     <style type="text/css">
 
-    .bio {
+    body {
+      background-color:rgb(169,175,186);
+    }
+
+    .profov {
       background-color: rgb(96,136,201);
       text-align: center;
     }
@@ -23,19 +27,18 @@
       text-align: center;
     }
 
+    img {
+      width: 100%;
+    }
+
+    .back {
+      text-align: center;
+      border: 2px solid;
+    }
+
     .title {
       text-align: center;
     }
-
-    .personal {
-      border: 2px solid;
-      vertical-align: middle;
-    }
-
-    .professional {
-          border: 2px solid;
-          vertical-align: middle;
-        }
 
     </style>
 
@@ -44,12 +47,38 @@
   </head>
 
   <body>
+    <div class="col title">
+      <h1>Professional Interests</h1>
+    </div>
 
     <div class="container-fluid">
 
+      <div class="row placeholder profov">
+        <div class="col profov">
+          <h4>Overview</h4><br/>
+
+          I am currently pursuing a Master's in Information Systems while my undergraduate degree is in Supply Chain Management.  As a result of this I have had professional experiences in both manufacturing and IT related fields.  Through these experiences I have found my true interests lie in how companies can leverage data and technology to drive efficiency and success.  To me a dataset is like a puzzle and as you start to put the pieces together you begin to write a story.  These are the stories I want to help write.<br/>
+          <br/>
+        </div>
+      </div>
 
 
-    </div>
+        <div class="col placeholder">
+          <img src="img/data.jpg"/>
+        </div>
+
+      </br>
+        <a href="index.html">
+        <div class="col back">
+          <br/>
+          Back to Home Page
+          <br/>
+          <br/>
+        </div>
+        </a>
+        <br/>
+
+      </div>
 
   </body>
 </html>
