@@ -4,6 +4,7 @@
 
   <head>
     <!-- Required meta tags -->
+    <link rel="stylesheet" href="css/design.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,36 +14,6 @@
 
     <style type="text/css">
 
-    body {
-      background-color:rgb(169,175,186);
-    }
-
-    .persov {
-      background-color: rgb(96,136,201);
-      text-align: center;
-    }
-
-    .desc {
-      background-color: rgb(169,175,186);
-      text-align: center;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    .back {
-      text-align: center;
-      border: 2px solid;
-    }
-
-    .title {
-      text-align: center;
-    }
-
-    .data {
-      text-align: center;
-    }
 
     </style>
 
@@ -53,6 +24,14 @@
   <body>
     <div class="col title">
       <h1>Personal Interests</h1>
+    </div>
+
+    <div>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="personal.html" class="active">Personal Interests</a></li>
+        <li><a href="professional.html">Professional Interests</a></li>
+      </ul>
     </div>
 
     <div class="container-fluid">
@@ -68,7 +47,7 @@
 
 
         <div class="col">
-          <img src="img/peru.jpg"/>
+          <img src="img/peru.jpg" class="image"/>
         </div>
 
       </br>
@@ -126,6 +105,25 @@
             </tbody>
           </table>
         </div>
+
+        <div class="col form">
+          <form></br>
+          <h5>Enter New Record</h5></br>
+            <div class="col country">
+            Country:
+            <input type="text" />
+            </div></br>
+            <div class="col population">
+            Population:
+            <input type="text" />
+            </div></br>
+            <div class="col date">
+            Date:
+            <input type="text" />
+            </div></br>
+            <input type="submit" /></br>
+          </form>
+        </div></br>
 
         <a href="index.html">
         <div class="col back">

@@ -1,0 +1,118 @@
+body {
+  background-color:rgb(169,175,186);
+}
+
+.persov {
+  background-color: rgb(96,136,201);
+  text-align: center;
+}
+
+.desc {
+  background-color: rgb(169,175,186);
+  text-align: center;
+}
+
+.back {
+  text-align: center;
+  border: 2px solid;
+}
+
+.image {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.data {
+  text-align: center;
+}
+
+.form {
+  text-align: center;
+  border:solid 2px;
+}
+
+body {
+  background-color:rgb(169,175,186);
+}
+
+.profov {
+  background-color: rgb(96,136,201);
+  text-align: center;
+}
+
+.desc {
+  background-color: rgb(169,175,186);
+  text-align: center;
+}
+
+.back {
+  text-align: center;
+  border: 2px solid;
+}
+
+.title {
+  text-align: center;
+}
+
+.bio {
+  background-color: rgb(96,136,201);
+  text-align: center;
+}
+
+.desc {
+  background-color: rgb(169,175,186);
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.personal, .professional {
+  border: 2px solid;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: rgb(96,136,201);
+}
+
+h2, h4, h1 {
+  text-transform: uppercase;
+}
+
+body {
+  background-color: rgb(209,211,214);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(209,211,214);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(96,136,201);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  background-color: rgb(96,136,201);
+  color: white;
+}

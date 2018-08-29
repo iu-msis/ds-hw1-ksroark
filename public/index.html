@@ -4,6 +4,7 @@
 
   <head>
     <!-- Required meta tags -->
+    <link rel="stylesheet" href="css/design.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,35 +14,6 @@
 
     <style type="text/css">
 
-    .bio {
-      background-color: rgb(96,136,201);
-      text-align: center;
-    }
-
-    .desc {
-      background-color: rgb(169,175,186);
-      text-align: center;
-    }
-
-    .title {
-      text-align: center;
-    }
-
-    .personal, .professional {
-      border: 2px solid;
-      vertical-align: middle;
-      text-transform: uppercase;
-      color: rgb(96,136,201);
-    }
-
-    h2, h4, h1 {
-      text-transform: uppercase;
-    }
-
-    body {
-      background-color: rgb(209,211,214);
-    }
-
     </style>
 
     <title>About Me</title>
@@ -49,12 +21,19 @@
   </head>
 
   <body>
-
-    <div class="container-fluid">
-
-      <div class="row title">
+      <div class="col title">
         <h1>A Page About Me</h1>
       </div>
+
+      <div>
+        <ul>
+          <li><a href="index.html" class="active">Overview</a></li>
+          <li><a href="personal.html">Personal Interests</a></li>
+          <li><a href="professional.html">Professional Interests</a></li>
+        </ul>
+      </div>
+
+      <div class="container-fluid">
 
       <div class="row">
         <div class="col placeholder bio">
@@ -81,7 +60,7 @@
           </section>
           </a>
           <br/>
-          <a href="professional">
+          <a href="professional.html">
           <section class="professional">
           <br/>Professional Interests<br/><br/>
           </section>
@@ -91,8 +70,6 @@
         </br/>
         </div>
       </div>
-
     </div>
-
   </body>
 </html>
