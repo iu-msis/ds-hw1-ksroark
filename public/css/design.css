@@ -116,3 +116,16 @@ li a:hover {
   background-color: rgb(96,136,201);
   color: white;
 }
+
+.pics {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
