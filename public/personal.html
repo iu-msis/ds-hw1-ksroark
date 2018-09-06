@@ -72,98 +72,50 @@
             </a>
           </div>
         </div>
+        <i>All photographs by Kyle Roark</i>
 
       </br>
         <div class="col tabled">
           <h4 class="col data">Data</h4>
-          <table class="table table-striped table-sm">
+          <table id="dataTable" class="table table-striped table-sm">
             <thead>
               <tr>
-                <th>
-                  Country
-                </th>
-                <th>
-                  Population
-                </th>
-                <th>
-                  Date Landed
-                </th>
-                <th>
-                  Currency
-                </th>
+                <th>Country</th>
+                <th>Population</th>
+                <th>Date Landed</th>
+                <th>Currency</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  Iceland
-                </td>
-                <td>
-                  334,252
-                </td>
-                <td>
-                  05/06/2016<br/><br/>
-                  01/02/2017
-                </td>
-                <td>
-                  Krona
-                </td>
+                <td>Iceland</td>
+                <td>334,252</td>
+                <td>05/06/2016<br/><br/>01/02/2017</td>
+                <td>Krona</td>
               </tr>
               <tr>
-                <td>
-                  Morocco
-                </td>
-                <td>
-                  35,280,000
-                </td>
-                <td>
-                  07/28/2017
-                </td>
-                <td>
-                  Dirham
-                </td>
+                <td>Morocco</td>
+                <td>35,280,000</td>
+                <td>07/28/2017</td>
+                <td>Dirham</td>
               </tr>
               <tr>
-                <td>
-                  Peru
-                </td>
-                <td>
-                  31,770,000
-                </td>
-                <td>
-                  05/04/2018
-                </td>
-                <td>
-                  Sol
-                </td>
+                <td>Peru</td>
+                <td>31,770,000</td>
+                <td>05/04/2018</td>
+                <td>Sol</td>
               </tr>
               <tr>
-                <td>
-                  Norway
-                </td>
-                <td>
-                  5,233,000
-                </td>
-                <td>
-                  05/16/2017
-                </td>
-                <td>
-                  Krone
-                </td>
+                <td>Norway</td>
+                <td>5,233,000</td>
+                <td>05/16/2017</td>
+                <td>Krone</td>
               </tr>
               <tr>
-                <td>
-                  Costa Rica
-                </td>
-                <td>
-                  4,857,000
-                </td>
-                <td>
-                  07/21/2015
-                </td>
-                <td>
-                  Colon
-                </td>
+                <td>Costa Rica</td>
+                <td>4,857,000</td>
+                <td>07/21/2015</td>
+                <td>Colon</td>
               </tr>
             </tbody>
           </table>
@@ -203,6 +155,12 @@
         <br/>
 
       </div>
+
+      <script src="js/tablesort.min.js"></script>
+      <script>
+        new Tablesort(document.getElementById('dataTable'));
+      </script>
+      <!-- table sort code by http://tristen.ca/tablesort/demo/ -->
 
   </body>
 </html>
