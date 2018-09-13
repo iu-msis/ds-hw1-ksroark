@@ -21,6 +21,7 @@
   </head>
 
   <body>
+    <main id="users">
       <div class="col title">
         <h1>A Page About Me</h1>
       </div>
@@ -35,41 +36,48 @@
 
       <div class="container-fluid">
 
-      <div class="row">
-        <div class="col placeholder bio">
-          <h2>Who Am I?</h2>
-          <h4>Kyle Roark</h4>
-          <img src="img/hs_Roark_Kyle_MSIS.png" height=200px/><br/>
+        <div class="row">
+          <div class="col placeholder bio">
+            <div v-for="result in results">
+              <h2>Who Am I?</h2>
+              <h4 v-for="result in results">{{ result.name.first }} {{ result.name.last }}</h4>
+              <img v-for="result in results" src="img/hs_Roark_Kyle_MSIS.png" height="200px"/><br/>
 
-        </br/>
-          Indiana, United States<br/>
-          April 09, 1996<br/>
-          22 Years Old</br/>
-          <a href="mailto:ksroark@iu.edu">ksroark@iu.edu</a><br/><br/>
+              <br/>
+                {{ result.location.city }}, {{ result.location.state }}<br/>
+                {{ result.dob.date }}<br/>
+                {{ age }}<br/>
+                <a href="mailto:ksroark@iu.edu">{{ result.email }}</a><br/><br/>
+            </div>
 
-        </br/>
-        </div>
+            <br/>
+          </div>
 
-        <div class="col placeholder desc">
-          <h2>What Will You Find Here?</h2>
-          This page is a description of who I am and what I am interested in.  Click on the links below to learn more about either my professional interests or my personal interests.
-          <br/><br/><br/><br/>
-          <a href="personal.html">
-          <section class="personal">
-            <br/>Personal Interests<br/><br/>
-          </section>
-          </a>
-          <br/>
-          <a href="professional.html">
-          <section class="professional">
-          <br/>Professional Interests<br/><br/>
-          </section>
-          </a>
-          <br/>
+          <div class="col placeholder desc">
+            <h2>What Will You Find Here?</h2>
+            This page is a description of who I am and what I am interested in.  Click on the links below to learn more about either my professional interests or my personal interests.
+            <br/><br/><br/><br/>
+            <a href="personal.html">
+            <section class="personal">
+              <br/>Personal Interests<br/><br/>
+            </section>
+            </a>
+            <br/>
+            <a href="professional.html">
+            <section class="professional">
+            <br/>Professional Interests<br/><br/>
+            </section>
+            </a>
+            <br/>
 
-        </br/>
+            <br/>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/user.app.js"></script>
+
   </body>
 </html>
