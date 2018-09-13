@@ -24,7 +24,7 @@
 
     <main>
       <div class="col title">
-        <h1>A Page About Me</h1>
+        <h1>Random User Interface</h1>
       </div>
 
       <div>
@@ -46,9 +46,10 @@
 
               <br/>
                 {{ result.location.city }}, {{ result.location.state }}<br/>
-                {{ result.dob.date }}<br/>
+                {{ pretty_dob(result.dob.date) }}<br/>
                 {{ age_calc }} Years Old<br/>
                 <a v-bind:href="result.email">{{ result.email }}</a><br/><br/>
+                <button v-on:click="reset">New User</button>
             </div>
 
             <br/>
