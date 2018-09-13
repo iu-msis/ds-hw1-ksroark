@@ -42,16 +42,14 @@
             <div>
               <h2>Who Am I?</h2>
               <h4>{{ result.name.first }} {{ result.name.last }}</h4>
-              <img src="img/hs_Roark_Kyle_MSIS.png" height="200px"/><br/>
+              <img v-bind:src="result.picture.large" height="200px"/><br/>
 
               <br/>
                 {{ result.location.city }}, {{ result.location.state }}<br/>
                 {{ result.dob.date }}<br/>
-                Enter age here<br/>
-                <a href="mailto:ksroark@iu.edu">{{ result.email }}</a><br/><br/>
+                {{ age_calc }} Years Old<br/>
+                <a v-bind:href="result.email">{{ result.email }}</a><br/><br/>
             </div>
-
-            <h2>Who Am I?</h2>
 
             <br/>
           </div>

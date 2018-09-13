@@ -57,12 +57,23 @@ var userApp = new Vue({
   },
 
   computed: {
+
     age_calc: function () {
-      return moment().diff(this.dob.date, 'years');
+      return moment().diff(moment(userApp.result.dob.date), 'years');
+    },
+
+    pretty_dob_info: function() {
+      return this.prety_dob(userApp.result.dob.date);
     }
+
   },
 
   methods: {
+
+    pretty_dob: function (bd) {
+      return moment(bd).format('l');
+    },
+
     fetchResults: function () {
       fetch ( 'https://randomuser.me/api/' )
       .then( response => response.json())
