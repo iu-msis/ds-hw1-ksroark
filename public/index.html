@@ -21,7 +21,8 @@
   </head>
 
   <body>
-    <main id="users">
+
+    <main>
       <div class="col title">
         <h1>A Page About Me</h1>
       </div>
@@ -34,11 +35,11 @@
         </ul>
       </div>
 
-      <div class="container-fluid">
+      <div id="users" class="container-fluid">
 
         <div class="row">
           <div class="col placeholder bio">
-            <div v-for="result in results">
+            <div>
               <h2>Who Am I?</h2>
               <h4>{{ result.name.first }} {{ result.name.last }}</h4>
               <img src="img/hs_Roark_Kyle_MSIS.png" height="200px"/><br/>
@@ -49,6 +50,8 @@
                 Enter age here<br/>
                 <a href="mailto:ksroark@iu.edu">{{ result.email }}</a><br/><br/>
             </div>
+
+            <h2>Who Am I?</h2>
 
             <br/>
           </div>

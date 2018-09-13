@@ -1,15 +1,7 @@
 var userApp = new Vue({
   el: '#users',
   data: {
-    "name" : "Tapestry",
-    "short_description": "Build a visualization layer for the project dashboard",
-    "start_date" : "2018-07-01",
-    "target_date" : "2018-11-03",
-    "budget" : "4950000",
-    "spent" : "3456700",
-    "projected_spend": "4740500",
-    "weekly_effort_target": 400,
-    results: [
+    result:
       {
         gender: '',
         name: {
@@ -62,25 +54,28 @@ var userApp = new Vue({
         },
         nat: ''
       }
-    ]
   },
+
   computed: {
-    result_age: function () {
-      return moment(this.dob.date).diff(moment(), 'days');
+    age_calc: function () {
+      return moment().diff(this.dob.date, 'years');
     }
   },
+
   methods: {
-    fetchResults () {
+    fetchResults: function () {
       fetch ( 'https://randomuser.me/api/' )
-      .then( response => response.json() )
-      .then( json => {userApp.results = json } )
+      .then( response => response.json())
+      .then( json => {userApp.result = json.results[0];})
       .catch ( function(err) {
         console.log('TASK FETCH ERROR:');
         console.log(err);
-      })
+      });
       }
     },
-  created () {
+
+  created: function () {
     this.fetchResults()
   }
+
 });
