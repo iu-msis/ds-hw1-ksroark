@@ -59,11 +59,11 @@ var userApp = new Vue({
   computed: {
 
     age_calc: function () {
-      return moment().diff(moment(userApp.result.dob.date), 'years');
+      return moment().diff(moment(this.result.dob.date), 'years');
     },
 
     pretty_dob_info: function() {
-      return this.prety_dob(userApp.result.dob.date);
+      return this.prety_dob(this.result.dob.date);
     }
 
   },
