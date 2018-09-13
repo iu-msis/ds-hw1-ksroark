@@ -49,7 +49,7 @@
                 {{ pretty_dob(result.dob.date) }}<br/>
                 {{ age_calc }} Years Old<br/>
                 <a v-bind:href="result.email">{{ result.email }}</a><br/><br/>
-                <button v-on:click="reset">New User</button>
+                <button v-on:click="fetchResults">New User</button>
             </div>
 
             <br/>
