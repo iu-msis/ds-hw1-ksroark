@@ -25,4 +25,19 @@ class Comment
   return $arr;
   }
 
+  public function create() {
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+    $sql = 'INSERT Comment (comment)
+            VALUES (?)';
+    $statement = $db->prepare($sql);
+    $success = $statement->execute([
+        $this->comment
+    ]);
+    if (!$success) {
+      //TODO: Better error handling
+      die ('Bad SQL on insert');
+    }
+    $this->id = $db->lastInsertId();
+  }
+
 }
