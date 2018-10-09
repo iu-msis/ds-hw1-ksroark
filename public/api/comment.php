@@ -11,7 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $commentArr = Comment::fetchAll();
 
 // 2. Conver to JSON
-$json = json_encode($commentArr);
+$json = json_encode($commentArr, JSON_PRETTY_PRINT);
 
 // 3. Print
+header('Content-Type: application/json');
 echo $json;
