@@ -4,7 +4,7 @@ class Comment
   public $id;
   public $comment;
   public function __construct($row) {
-    $this->id = isset($data['id']) ? intval($data['id']) : null;
+    $this->id = isset($row['id']) ? intval($row['id']) : null;
     $this->comment = $row['comment'];
   }
 
