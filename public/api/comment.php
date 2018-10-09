@@ -6,7 +6,7 @@ require '../../app/common.php';
 
 
 // 1. Goto the database and get all work associated with $taskId
-$commentArr = Work::fetchAll();
+$commentArr = Comment::fetchAll();
 
 // 2. Conver to JSON
 $json = json_encode($commentArr);
