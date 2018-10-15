@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<!-- Document Object Model: Inverse tree structure, how we structure documents. Each element has its own ID (#nav) or class name (class names can be repeated) -->
+
+  <head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" href="css/design.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CDN: Content Delivery Network: Series of servers dispersed across the globe and when looking for given content you are redirected to the server closest to you. Makes things faster. -->
+
+    <style type="text/css">
+
+
+    </style>
+
+    <title>Comments Page</title>
+
+  </head>
+
+  <body>
+    <div class="col title">
+      <h1>Comments Page</h1>
+    </div>
+
+    <div>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="personal.html">Personal Interests</a></li>
+        <li><a href="professional.html">Professional Interests</a></li>
+        <li><a href="comments.html" class="active">Comments Page</a></li>
+      </ul>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row placeholder persov">
+        <div class="col placeholder ov">
+          <h4>What is This Page?</h4>
+          <br/>
+          This page will display all entered comments in table form.
+          <br/><br/>
+        </div>
+      </div>
+
+    <br/>
+        <div class="col tabled">
+          <h4 class="col data">Comments</h4>
+          <table id="commentTable" class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>Comment Id</th>
+                <th>Comment Text</th>
+              </tr>
+            </thead>
+            <tbody id="commentTableBody">
+              <tr>
+                <td>commentId goes here</td>
+                <td>commentText goes here</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col form">
+          <div class="col comment">
+          <br/><h5>Enter New Comment</h5><br/>
+          <form id="newCommentForm"><br/>
+            Comment:
+            <textarea></textarea><br/><br/>
+            <input type="submit" /><br/><br/>
+          </form>
+        </div><br/>
+        </div>
+
+        <br/>
+                
+        <a href="index.html">
+        <div class="col back">
+          <br/>
+          Back to Home Page
+          <br/>
+          <br/>
+        </div>
+        </a>
+        <br/>
+
+      <script src="js/tablesort.min.js"></script>
+      <script>
+        new Tablesort(document.getElementById('dataTable'));
+      </script>
+      <!-- table sort code by http://tristen.ca/tablesort/demo/ -->
+
+  </body>
+</html>
