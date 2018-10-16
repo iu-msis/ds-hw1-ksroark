@@ -1,10 +1,7 @@
 var commentsApp = new Vue({
-  el: '#comment',
+  el: '#commentStuff',
   data: {
-    comment: {
-      id: 0,
-      comment: ''
-    },
+    comment: [ ],
     commentForm: { },   // populated by this.getEmptyWorkForm()
   },
   computed: {},
