@@ -7,6 +7,7 @@ var CommentsApp = new Vue({
     comments: [ ]
   },
   computed: {},
+/* CODE HELP FROM IN-CLASS WORK*/
   methods: {
     handleCommentForm(e) {
 
