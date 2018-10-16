@@ -1,13 +1,12 @@
 var commentsApp = new Vue({
   el: '#commentMain',
   data: {
-    comment: {
+    commentInstance: {
       id: 0,
-      title: ''
+      comment: ''
     },
     comment: [ ],
-    commentForm: { },   // populated by this.getEmptyWorkForm()
-    //teamList: [] // All the teams
+    commentForm: { },
   },
   computed: {},
   methods: {
@@ -38,20 +37,29 @@ var commentsApp = new Vue({
   },
   created () {
 
+        // Do data fetch
+        const url = new URL(window.location.href);
+        const taskId = url.searchParams.get('id');
+        console.log('Comment: '+ id);
+        this.comment.id = id;
 
+        if (!id) {
+          //TODO: Error? 404?
+          //e.g., window.location = '404.html';
+        }
 
-    // Populate workForm with default values
-    this.workForm = this.getEmptyWorkForm();
+        // Populate workForm with default values
+        this.commentForm = this.getEmptyCommenntForm();
 
-    // TODO: Fetch task-specific data
-    // fetch('api/task?id=4')
-    fetch('api/comment.php')
-    .then( response => response.json() )
-    .then( json => {commentsApp.comment = json} )
-    .catch( err => {
-      console.error('comment FETCH ERROR:');
-      console.error(err);
-    })
+        // TODO: Fetch task-specific data
+        // fetch('api/task?id=4')
+        fetch('api/comment.php?commentId='+id)
+        .then( response => response.json() )
+        .then( json => {commentsApp.work = json} )
+        .catch( err => {
+          console.error('COMMENT FETCH ERROR:');
+          console.error(err);
+        })
 
   }
 })
