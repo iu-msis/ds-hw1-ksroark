@@ -57,9 +57,7 @@
                 <th>Comment Text</th>
               </tr>
             </thead>
-            <tbody v-for="c in comment"
-            :key="c.id"
-            :id="'comment-' + c.id">
+            <tbody v-for="c in commentList">
               <td>{{ c.id }}</td>
               <td>{{ c.comment }}</td>
             </tbody>
@@ -71,16 +69,16 @@
           <div class="col comment">
           <br/><h5>Enter New Comment</h5><br/>
 
-          <form @submit.prevent="handleWorkForm">
+<!--          <form @submit.prevent="handleWorkForm">
             <div class="form-group row">
               <label for="comment" class="col-sm-1 col-form-label">Comment: </label>
               <div class="col-sm-6">
                 <textarea id="comment" v-model="commentForm.comment" class="form-control" required></textarea>
               </div>
             </div>
-            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
             <button type="submit" class="btn btn-primary">Submit Comment</button>
           </form>
+-->
 
           </div><br/>
         </div>

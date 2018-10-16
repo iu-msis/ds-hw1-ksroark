@@ -1,52 +1,18 @@
-var commentsApp = new Vue({
-  el: '#comments',
+var CommentsApp = new Vue({
+  el: '#commentMain',
   data: {
-    comment: {
-      id: 0,
-      comment: ''
+    commentList: {
     },
-    commentForm: { },   // populated by this.getEmptyWorkForm()
+    comment: [ ]
   },
   computed: {},
-  methods: {
-    handleCommentForm(e) {
-
-      const s = JSON.stringify(this.commentForm);
-
-      console.log(s);
-
-      // POST to remote server
-      fetch('api/comment.php', {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
-        headers: {
-            "Content-Type": "application/json; charset=utf-8"
-        },
-        body: s // body data type must match "Content-Type" header
-      })
-      .then( response => response.json() )
-      .then( json => {this.comment.push(json)})
-      .catch( err => {
-        console.error('COMMENT POST ERROR:');
-        console.error(err);
-      })
-
-      // Reset workForm
-      this.commentForm = this.getEmptyCommentForm();
-    },
-    getEmptyCommentForm() {
-      return {
-        comment: ''
-      }
-    },
-  },
+  methods: {},
   created () {
-    // Populate workForm with default values
-    this.commentForm = this.getEmptyCommentForm();
 
     // Fetch all teams, for the form
     fetch('api/comment.php')
     .then( response => response.json() )
-    .then( json => {this.comment.push(json)})
+    .then( json => {CommentsApp.commentList = json})
     .catch( err => {
       console.log('COMMENT FETCH ERROR:');
       console.log(err);
