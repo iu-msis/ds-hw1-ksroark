@@ -82,8 +82,8 @@ var userApp = new Vue({
         console.log('TASK FETCH ERROR:');
         console.log(err);
       });
-      }
-    },
+    }
+  },
 
   created: function () {
     this.fetchResults()
