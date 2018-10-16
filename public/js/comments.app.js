@@ -1,15 +1,13 @@
 var CommentsApp = new Vue({
   el: '#commentMain',
   data: {
-    commentList: {
-    },
+    commentList: { },
     comment: [ ]
   },
   computed: {},
   methods: {},
-  created () {
 
-    // Fetch all teams, for the form
+  created () {
     fetch('api/comment.php')
     .then( response => response.json() )
     .then( json => {CommentsApp.commentList = json})
@@ -18,4 +16,5 @@ var CommentsApp = new Vue({
       console.log(err);
     })
   }
+
 })
