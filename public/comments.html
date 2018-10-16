@@ -50,14 +50,14 @@
         <div class="col tabled">
           <h4 class="col data">Comments</h4>
 
-          <table class="table table-striped table-sm">
+          <table id="commentTable" class="table table-striped table-sm">
             <thead>
               <tr>
                 <th>Comment ID</th>
                 <th>Comment Text</th>
               </tr>
             </thead>
-            <tbody v-for="c in commentList">
+            <tbody id="commentTableBody" v-for="c in commentList">
               <td>{{ c.id }}</td>
               <td>{{ c.comment }}</td>
             </tbody>
@@ -69,7 +69,7 @@
           <div class="col comment">
           <br/><h5>Enter New Comment</h5><br/>
 
-<!--          <form @submit.prevent="handleWorkForm">
+<!--          <form @submit.prevent="handleWorkForm" id="newCommentForm">
             <div class="form-group row">
               <label for="comment" class="col-sm-1 col-form-label">Comment: </label>
               <div class="col-sm-6">
