@@ -2,10 +2,40 @@ var CommentsApp = new Vue({
   el: '#commentMain',
   data: {
     commentList: { },
-    comment: [ ]
+    comment: [ ],
+    newCommentForm: { },
+    comments: [ ]
   },
   computed: {},
-  methods: {},
+  methods: {
+    handleCommentForm(e) {
+
+      const s = JSON.stringify(this.newCommentForm);
+
+      console.log(s);
+
+      // POST to remote server
+      fetch('api/comment.php', {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        },
+        body: s // body data type must match "Content-Type" header
+      })
+      .then( response => response.json() )
+      .then( json => {this.comments.push(json)})
+      .catch( err => {
+        console.error('COMMENT POST ERROR:');
+        console.error(err);
+      })
+      this.newCommentForm = this.getEmptyCommentForm();
+    },
+    getEmptyCommentForm() {
+      return {
+        comment: ''
+      }
+    }
+  },
 
   created () {
     fetch('api/comment.php')
