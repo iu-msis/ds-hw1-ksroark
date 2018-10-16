@@ -9,7 +9,7 @@ var commentsApp = new Vue({
   },
   computed: {},
   methods: {
-    handleWorkForm(e) {
+    handleCommentForm(e) {
 
       const s = JSON.stringify(this.commentForm);
 
@@ -35,24 +35,11 @@ var commentsApp = new Vue({
     },
     getEmptyCommentForm() {
       return {
-        id: 0,
         comment: ''
       }
     },
   },
   created () {
-
-    // Do data fetch
-    const url = new URL(window.location.href);
-    const taskId = url.searchParams.get('id');
-    console.log('Comment: '+ id);
-    this.comment.id = id;
-
-    if (!id) {
-      //TODO: Error? 404?
-      //e.g., window.location = '404.html';
-    }
-
     // Populate workForm with default values
     this.commentForm = this.getEmptyCommentForm();
 
