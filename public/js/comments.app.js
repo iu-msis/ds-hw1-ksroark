@@ -1,16 +1,15 @@
 var commentsApp = new Vue({
-  el: '#commentMain',
+  el: '#comment',
   data: {
     comment: {
       id: 0,
       comment: ''
     },
-    comment: [ ],
-    commentForm: { },
+    commentForm: { },   // populated by this.getEmptyWorkForm()
   },
   computed: {},
   methods: {
-    handleCommentForm(e) {
+    handleWorkForm(e) {
 
       const s = JSON.stringify(this.commentForm);
 
@@ -33,33 +32,37 @@ var commentsApp = new Vue({
 
       // Reset workForm
       this.commentForm = this.getEmptyCommentForm();
-    }
+    },
+    getEmptyCommentForm() {
+      return {
+        id: 0,
+        comment: ''
+      }
+    },
   },
   created () {
 
-        // Do data fetch
-        const url = new URL(window.location.href);
-        const taskId = url.searchParams.get('id');
-        console.log('Comment: '+ id);
-        this.comment.id = id;
+    // Do data fetch
+    const url = new URL(window.location.href);
+    const taskId = url.searchParams.get('id');
+    console.log('Comment: '+ id);
+    this.comment.id = id;
 
-        if (!id) {
-          //TODO: Error? 404?
-          //e.g., window.location = '404.html';
-        }
+    if (!id) {
+      //TODO: Error? 404?
+      //e.g., window.location = '404.html';
+    }
 
-        // Populate workForm with default values
-        this.commentForm = this.getEmptyCommenntForm();
+    // Populate workForm with default values
+    this.commentForm = this.getEmptyCommentForm();
 
-        // TODO: Fetch task-specific data
-        // fetch('api/task?id=4')
-        fetch('api/comment.php?commentId='+id)
-        .then( response => response.json() )
-        .then( json => {commentsApp.work = json} )
-        .catch( err => {
-          console.error('COMMENT FETCH ERROR:');
-          console.error(err);
-        })
-
+    // Fetch all teams, for the form
+    fetch('api/comment.php')
+    .then( response => response.json() )
+    .then( json => {this.comment.push(json)})
+    .catch( err => {
+      console.log('COMMENT FETCH ERROR:');
+      console.log(err);
+    })
   }
 })
